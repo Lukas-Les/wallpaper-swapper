@@ -1,8 +1,7 @@
 #!/bin/bash
 
 WALLPAPERS_DIR="$HOME/Pictures/Wallpapers/"
-DISPLAY=:0
-DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 
 ensure_wallpapers_dir() {
     if [ ! -d "$WALLPAPERS_DIR" ]; then
